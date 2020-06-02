@@ -15,7 +15,7 @@
 	<h1>Hello {name}!</h1>
 	<p>{color} jean!</p>
 	<button on:click={handleClick}>update jean color</button>
-	<input type='text' on:input={handleInput} />
+	<input type='text' on:input={handleInput} value={color} />
 </main>
 
 <style>
