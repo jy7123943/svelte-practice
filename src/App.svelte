@@ -1,24 +1,16 @@
 <script>
-	export let name;
+	let firstName = 'Jimi';
+	let lastName = 'Hendrix';
 	let color = 'black';
 
-	const handleClick = () => {
-		color = 'blue';
-	};
-
-	const handleInput = (e) => {
-		color = e.target.value;
-	};
+	$: fullName = `${firstName} ${lastName}`;  // reactive values
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<!-- style bind -->
-	<p style='color: {color}'>{color} jean!</p>
-	<button on:click={handleClick}>update jean color</button>
-	<!-- one way data binding -->
-	<!-- <input type='text' on:input={handleInput} value={color} />  -->
-	<!-- two way data binding -->
+	<!-- <p>{firstName} {lastName} - {color} jean!</p> -->
+	<p>{fullName} - {color} jean!</p>
+	<input type='text' bind:value={firstName} />
+	<input type='text' bind:value={lastName} />
 	<input type='text' bind:value={color} />
 </main>
 
