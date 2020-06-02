@@ -7,7 +7,12 @@
 </script>
 
 <main>
-
+	{#each people as person}
+		<div>
+			<h4>{person.name}</h4>
+			<p>{person.age} years old, {person.hairColor} hair</p>
+		</div>
+	{/each}
 </main>
 
 <style>
