@@ -13,9 +13,13 @@
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>{color} jean!</p>
+	<!-- style bind -->
+	<p style='color: {color}'>{color} jean!</p>
 	<button on:click={handleClick}>update jean color</button>
-	<input type='text' on:input={handleInput} value={color} />
+	<!-- one way data binding -->
+	<!-- <input type='text' on:input={handleInput} value={color} />  -->
+	<!-- two way data binding -->
+	<input type='text' bind:value={color} />
 </main>
 
 <style>
