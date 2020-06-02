@@ -4,6 +4,11 @@
 	let color = 'black';
 
 	$: fullName = `${firstName} ${lastName}`;  // reactive values
+	// $: console.log(color); // reactive statements
+	$: {
+		console.log(color);
+		console.log(fullName);
+	}
 </script>
 
 <main>
