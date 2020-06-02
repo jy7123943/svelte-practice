@@ -1,22 +1,13 @@
 <script>
-	let firstName = 'Jimi';
-	let lastName = 'Hendrix';
-	let color = 'black';
-
-	$: fullName = `${firstName} ${lastName}`;  // reactive values
-	// $: console.log(color); // reactive statements
-	$: {
-		console.log(color);
-		console.log(fullName);
-	}
+	let people = [
+		{ name: 'juno', hairColor: 'brown', age: 25, id: 1 },
+		{ name: 'mario', hairColor: 'black', age: 45, id: 2 },
+		{ name: 'lily', hairColor: 'pink', age: 35, id: 3 },
+	];
 </script>
 
 <main>
-	<!-- <p>{firstName} {lastName} - {color} jean!</p> -->
-	<p>{fullName} - {color} jean!</p>
-	<input type='text' bind:value={firstName} />
-	<input type='text' bind:value={lastName} />
-	<input type='text' bind:value={color} />
+
 </main>
 
 <style>
@@ -25,13 +16,6 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {
