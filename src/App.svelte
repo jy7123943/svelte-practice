@@ -1,4 +1,6 @@
 <script>
+	import Modal from './Modal.svelte';
+
 	let people = [
 		{ name: 'juno', hairColor: 'brown', age: 25, id: 1 },
 		{ name: 'mario', hairColor: 'black', age: 45, id: 2 },
@@ -13,14 +15,7 @@
 	let num = 3;
 </script>
 
-{#if num > 20}
-	<p>Greater than 20</p>
-{:else if num > 5}
-	<p>Greater than 5</p>
-{:else}
-	<p>Not greater than 5</p>
-{/if}
-
+<Modal />
 <main>
 	<!-- dom manipulating을 잘 하기 위해 person.id와 같이 특정 id를 key값으로 넣어줌으로써 people array data와 DOM을 연결함 -->
 	{#each people as person (person.id)}
