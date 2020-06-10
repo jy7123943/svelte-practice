@@ -9,13 +9,26 @@
 		// delete the person from people
 		people = people.filter(person => person.id !== id);
 	}
+
+	let num = 3;
 </script>
+
+{#if num > 20}
+	<p>Greater than 20</p>
+{:else if num > 5}
+	<p>Greater than 5</p>
+{:else}
+	<p>Not greater than 5</p>
+{/if}
 
 <main>
 	<!-- dom manipulating을 잘 하기 위해 person.id와 같이 특정 id를 key값으로 넣어줌으로써 people array data와 DOM을 연결함 -->
 	{#each people as person (person.id)}
 		<div>
 			<h4>{person.name}</h4>
+			{#if person.hairColor === 'black'}
+				<p><strong>MASTER NINJA</strong></p>
+			{/if}
 			<p>{person.age} years old, {person.hairColor} hair</p>
 			<button on:click={() => handleClick(person.id)}>delete</button>
 		</div>
