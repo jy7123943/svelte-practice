@@ -1,4 +1,8 @@
 <script>
+  // once - makes sure the event can only fire once (removes handler)
+  // preventDefault = prevent the default action (run e.preventDefault())
+  // self - only fires the event if the clicked element is the target
+
   export let message = 'default value';
   export let isPromo = false;
   export let showModal = false;
