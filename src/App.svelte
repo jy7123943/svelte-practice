@@ -15,7 +15,7 @@
 	let num = 3;
 </script>
 
-<Modal />
+<Modal message='I am a prop value' isPromo={true} />
 <main>
 	<!-- dom manipulating을 잘 하기 위해 person.id와 같이 특정 id를 key값으로 넣어줌으로써 people array data와 DOM을 연결함 -->
 	{#each people as person (person.id)}
