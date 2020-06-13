@@ -18,12 +18,18 @@
 		people = people.filter(person => person.id !== id);
 	}
 
+	let textColor = 'blue';
+	const handleAnchor = () => {
+		textColor = textColor === 'blue' ? 'red' : 'blue';
+	}
+
 	let num = 3;
 </script>
 
 <Modal message='I am a prop value' {showModal} on:click={toggleModal} />
 <main>
 	<button on:click={toggleModal}>Open Modal</button>
+	<a href='https://www.google.com' on:click|preventDefault={handleAnchor} style='color: {textColor}'>helloworld</a>
 	<!-- dom manipulating을 잘 하기 위해 person.id와 같이 특정 id를 key값으로 넣어줌으로써 people array data와 DOM을 연결함 -->
 	{#each people as person (person.id)}
 		<div>
