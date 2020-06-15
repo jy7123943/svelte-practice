@@ -15,7 +15,6 @@
 <h3>Add a new person</h3>
 <form on:submit|preventDefault={handleSubmit}>
   <input type="text" placeholder="name" bind:value={name} />
-  <input type="text" placeholder="hair color" bind:value={hairColor} />
   <input type="number" placeholder="age" bind:value={age} />
   <h4>Skills:</h4>
   <!-- <label>
@@ -36,6 +35,13 @@
   <label>
     <input type="checkbox" bind:group={skills} value="running" />running<br />
   </label>
+  <h4>hairColor:</h4>
+  <select bind:value={hairColor}>
+    <option value="black">black</option>
+    <option value="orange">orange</option>
+    <option value="brown">brown</option>
+    <option value="silver">silver</option>
+  </select>
   <button>Add Person</button>
 </form>
 
