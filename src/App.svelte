@@ -26,7 +26,17 @@
 	let num = 3;
 </script>
 
-<Modal message='I am a prop value' {showModal} on:click={toggleModal} />
+<Modal {showModal} on:click={toggleModal}>
+	<h3>Add a new person</h3>
+	<form>
+		<input type="text" placeholder="name" />
+		<input type="text" placeholder="hair color" />
+		<button>Add Person</button>
+	</form>
+	<!-- <div slot="title">
+		<h3>Add a new person</h3>
+	</div> -->
+</Modal>
 <main>
 	<button on:click={toggleModal}>Open Modal</button>
 	<a href='https://www.google.com' on:click|preventDefault={handleAnchor} style='color: {textColor}'>helloworld</a>
