@@ -25,10 +25,15 @@
 	}
 
 	let num = 3;
+
+	const addPerson = ({ detail: person }) => {
+		people = [person, ...people];
+		showModal = false;
+	};
 </script>
 
 <Modal {showModal} on:click={toggleModal}>
-	<AddPersonForm />
+	<AddPersonForm on:addPerson={addPerson} />
 	<!-- <div slot="title">
 		<h3>Add a new person</h3>
 	</div> -->
